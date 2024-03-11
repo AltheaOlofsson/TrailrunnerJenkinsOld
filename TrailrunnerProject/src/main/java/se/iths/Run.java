@@ -10,7 +10,7 @@ public class Run {
     LocalDate date;
     UUID id;
     String stringID;
-    String test;
+    String test = "test";
 
     
     public Run(double distance,int time, String dateString, String stringID) {
