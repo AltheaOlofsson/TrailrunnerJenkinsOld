@@ -10,7 +10,9 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                echo 'Stage 1'
+                script {
+                    git branch: params.Branch, url: "${gitURL}"
+                }
             }
         }
         stage('Clean Maven') {
