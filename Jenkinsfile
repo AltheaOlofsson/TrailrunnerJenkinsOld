@@ -8,16 +8,9 @@ pipeline {
     }
 
     stages {
-        stage('Checkout') {
-            steps {
-                script {
-                    git branch: params.Branch, url: "${gitURL}"
-                }
-            }
-        }
         stage('Clean Maven') {
             steps {
-                echo 'Stage 2'
+                mvn clean install
             }
         }
         stage('Build Trailrunner') {
