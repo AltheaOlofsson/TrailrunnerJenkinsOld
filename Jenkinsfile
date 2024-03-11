@@ -1,22 +1,29 @@
 pipeline {
     agent any
+    environment {
+        gitURL  =   "https://github.com/AltheaOlofsson/TrailrunnerJenkins.git"
+    }
+    parameters {
+        choice choices: ['main', 'B1'], description: "Choose which branch to run", name: "Branch"
+    }
+
     stages {
-        stage('Stage1') {
+        stage('Checkout') {
             steps {
                 echo 'Stage 1'
             }
         }
-        stage('Stage2') {
+        stage('Clean Maven') {
             steps {
                 echo 'Stage 2'
             }
         }
-        stage('Stage3') {
+        stage('Build Trailrunner') {
             steps {
                 echo 'Stage 3'
             }
         }
-        stage('Stage4') {
+        stage('Test trailrunner') {
             steps {
                 echo 'Stage 4'
             }
