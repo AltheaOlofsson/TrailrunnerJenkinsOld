@@ -3,26 +3,26 @@ pipeline {
     stages {
         stage('Stage1') {
             steps {
-                echo 'Hello World'
+                echo 'Stage 1'
             }
         }
         stage('Stage2') {
             steps {
-                echo 'Hello World'
+                echo 'Stage 2'
             }
         }
         stage('Stage3') {
             steps {
-                echo 'Hello World'
+                echo 'Stage 3'
             }
         }
         stage('Stage4') {
             steps {
-                echo 'Hello World'
+                echo 'Stage 4'
             }
             post { 
                 always { 
-                    echo 'I will always say Hello again!'
+                    echo 'stage 4.5!'
                 }
             }
         }
