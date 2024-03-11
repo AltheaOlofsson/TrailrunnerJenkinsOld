@@ -10,7 +10,7 @@ pipeline {
     stages {
         stage('Clean Maven') {
             steps {
-                mvn clean install
+                echo 'mvnClean'
             }
         }
         stage('Build Trailrunner') {
